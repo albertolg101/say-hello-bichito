@@ -60,8 +60,8 @@ export class AxolotlScene {
         this._scene.fog = new Fog(0x002f4b, 0, 15);
 
         gltfLoader.load(
-            '/pink_axolotl/scene.gltf',
-            (axolotl) => exrLoader.load('/envmap.exr', (texture) => {
+            'pink_axolotl/scene.gltf',
+            (axolotl) => exrLoader.load('envmap.exr', (texture) => {
                 const envMap = this._pmrem.fromEquirectangular(texture).texture;
                 this._initAxolotl(axolotl, envMap);
             })
@@ -96,7 +96,7 @@ export class AxolotlScene {
     }
 
     _initWater() {
-        const displacementMap = TL.load('/HQ_Noise.jpg');
+        const displacementMap = TL.load('HQ_Noise.jpg');
         const geo = new PlaneGeometry(40, 40, 100, 100);
         const mat = new MeshStandardMaterial({
             color: new Color(0x88ccee),
