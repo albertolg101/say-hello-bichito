@@ -1,5 +1,4 @@
 export function addNoiseToPlaneGeometry(noise, geometry, offset) {
-    console.log(geometry.attributes.position)
     for(let i = 0 ; i < geometry.attributes.position.count ; i++) {
         const x = geometry.attributes.position.getX(i);
         const y = geometry.attributes.position.getY(i);

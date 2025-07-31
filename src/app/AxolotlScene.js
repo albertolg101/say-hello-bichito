@@ -75,7 +75,6 @@ export class AxolotlScene {
     }
 
     _initAxolotl(axolotl, envMap) {
-        console.debug(axolotl);
         axolotl.scene.rotateY(-Math.PI / 2);
         axolotl.scene.castShadow = true;
         axolotl.scene.traverse((el) => {
